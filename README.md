@@ -87,12 +87,4 @@ pefile
 capstone
 ```
 
-The build checks the installed Kenshi executable and expected RVA layout, runs the scheduler tests, then builds the Release DLL and matching PDB.
-
-Build records also include binary hashes.
-
-Kenshi needs to be closed before deployment.
-
-The automated tests verify the scheduler and the expected loading hooks for the tested Kenshi executable. They don't prove that Freeloader will improve performance on every system.
-
-See [validation](docs/VALIDATION.md) for live testing and [loading evidence](docs/LOADING.md) for the loading mechanism.
+Have fun Kenshi puppies. 😘😘
