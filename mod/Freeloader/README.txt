@@ -1,31 +1,98 @@
-Freeloader 0.1.0 - Experimental
+# Freeloader
 
-Requires the supported Steam Kenshi 1.0.65 executable, RE_Kenshi 0.3.5 and
-KenshiLib 0.5.0. Enable Freeloader.mod in the launcher, then start Kenshi.
+Freeloader is an experimental RE_Kenshi plugin that attempts to reduce region loading pauses by starting some loading ahead of camera movement.
 
-Starts nearby sector loading ahead of camera travel using Kenshi's native
-background loader. Requests one new sector per loading cycle and retains at
-most six speculative reservations. Stops adding sectors below 2 GiB available
-RAM or at the configured active-zone limit.
+It tracks the direction the camera is moving and requests the next likely region through Kenshi's existing background loader.
 
-This first build is not yet playtested. It aims to reduce travel pauses, but
-required loading pauses and main-thread hitches remain. Preloading also brings
-towns/NPCs into simulation earlier and uses extra memory.
+It keeps up to six predicted sector reservations at once, stops making new requests below 2 GiB available RAM, and respects the configured active-zone limit. Camera jumps and world resets clear the current prediction.
 
-Freeloader.ini (restart after changes):
-  Enabled=1               Set to 0 to disable prefetching.
-  Diagnostics=1           Requests and 30-second summaries in RE_Kenshi_log.txt.
-  LookAheadDistance=1800   Base prediction distance, range 500-3500 game units.
-  MaxActiveZones=32        Total active-zone admission limit, range 12-64.
-  RequestIntervalMs=500    Minimum request interval, range 250-5000 milliseconds.
+This first version is mainly aimed at reducing pauses while moving around the map.
 
-The log should show "Freeloader: hooks installed" after startup and
-"Freeloader: prefetch sector" during travel. Unsupported executables disable
-prefetching. Initial save loading, user pause and terrain readiness checks
-retain native behavior.
+It won't remove every loading pause. Kenshi can still stop while waiting on terrain, and loading buildings, NPCs, physics, navmesh data, or cleaning up resources can still cause stuttering.
 
-For comparison, repeat the same route/save with Enabled=0 and Enabled=1 after
-restarting. Check travel pauses, frame hitches, RAM, towns and terrain collision.
-Do not treat a successful boot or offline test as proof of smoother travel.
+Initial save loading and normal pausing are unchanged.
 
-To disable, untick Freeloader.mod in the launcher or set Enabled=0 and restart.
+Preloading may also cause towns and NPCs to become active earlier than normal and will use some additional memory.
+
+Version 0.1.0 is tested against the Steam version of **Kenshi 1.0.65**, using **RE_Kenshi 0.3.5** and **KenshiLib 0.5.0**.
+
+## Installation
+
+Place the contents of:
+
+```text
+mod/Freeloader
+```
+
+into:
+
+```text
+Kenshi/mods/Freeloader
+```
+
+Then enable `Freeloader.mod` in the Kenshi launcher.
+
+RE_Kenshi must already be installed.
+
+Restart Kenshi after changing the DLL or INI.
+
+Unsupported Kenshi executables will cause the plugin to disable itself.
+
+The included `Freeloader.mod` is the existing empty FCS mod used for loading the plugin.
+
+To disable Freeloader, either disable it in the Kenshi launcher or set:
+
+```ini
+Enabled=0
+```
+
+in `Freeloader.ini`.
+
+## Settings
+
+`Freeloader.ini` is located beside the DLL.
+
+* `Enabled=1`
+  Enables or disables Freeloader. Requires a restart.
+
+* `Diagnostics=1`
+  Logs preload requests and 30-second summaries to `RE_Kenshi_log.txt`.
+
+* `LookAheadDistance=1800`
+  Base camera lookahead distance. Limited between 500 and 3500 game units. Camera speed can increase this up to a maximum total of 4000.
+
+* `MaxActiveZones=32`
+  Stops new preload requests once Kenshi reaches this many active zones. Limited between 12 and 64. Existing player and base zones are never removed to make room.
+
+* `RequestIntervalMs=500`
+  Minimum time between preload requests. Limited between 250 and 5000 milliseconds.
+
+The defaults should be fine for most people.
+
+## Building
+
+For anyone building it themselves:
+
+```powershell
+./tools/build-plugin.ps1
+./tools/deploy.ps1
+```
+
+Uses the shared VC++ 2010 x64 toolchain and KenshiLib dependencies from the parent Kenshi workspace.
+
+Python requires:
+
+```text
+pefile
+capstone
+```
+
+The build checks the installed Kenshi executable and expected RVA layout, runs the scheduler tests, then builds the Release DLL and matching PDB.
+
+Build records also include binary hashes.
+
+Kenshi needs to be closed before deployment.
+
+The automated tests verify the scheduler and the expected loading hooks for the tested Kenshi executable. They don't prove that Freeloader will improve performance on every system.
+
+See [validation](docs/VALIDATION.md) for live testing and [loading evidence](docs/LOADING.md) for the loading mechanism.
