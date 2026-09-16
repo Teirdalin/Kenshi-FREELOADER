@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "engine": "E:\\SteamLibrary\\steamapps\\common\\Kenshi\\RE_Kenshi\\kenshi_x64.exe",
+  "engine_sha256": "504b362cde850d56afb1cea6f5b7b0ee014d9dd7b47e188599d91c804502cd3e",
+  "kenshilib_sha256": "5b6240622d06801dc39896e385efb834b8e1fe2fcdf86067d071ae7a04f6c83b",
+  "rva_sha256": "573c395997ed8d93dd837e27f89a440323089edd1ba93f68291631b448f9cbd0",
+  "addresses": {
+    "Update": "0xa11b70",
+    "Reset": "0x36b940",
+    "GameReset": "0x36ca40",
+    "Activate": "0xa0e1b0",
+    "Process": "0xa0e950"
+  },
+  "verified": [
+    "camera loaded-state pause guard",
+    "native pending-set admission",
+    "phase progression",
+    "physics/navmesh barriers",
+    "activation countdown layout",
+    "loaded-state accessors",
+    "grid layout and conversion",
+    "user pause preserved",
+    "normal save-load and import reset boundary"
+  ],
+  "runtime_tested": false
+}

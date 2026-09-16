@@ -1,0 +1,375 @@
+{
+  "SchemaVersion": 1,
+  "BuildId": "20260912-231814-256-5d4e1606",
+  "Status": "verified",
+  "StartedUtc": "2026-09-13T06:18:14.2720814Z",
+  "KenshiRoot": "E:\\SteamLibrary\\steamapps\\common\\Kenshi",
+  "Configuration": "Release",
+  "Architecture": "x64",
+  "CompilerVersion": "16.00.30319.01 built by: RTMRel",
+  "BuildDirectory": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606",
+  "Commands": [
+    {
+      "Executable": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "Arguments": [
+        "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\tools\\verify-native.py",
+        "--game",
+        "E:\\SteamLibrary\\steamapps\\common\\Kenshi"
+      ],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\verify-native.log"
+    },
+    {
+      "Executable": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\cl.exe",
+      "Arguments": [
+        "/nologo",
+        "/O2",
+        "/EHsc",
+        "/MD",
+        "/W3",
+        "/Zi",
+        "/FoStreamingPolicyTests.obj",
+        "/FdStreamingPolicyTests-compile.pdb",
+        "/FeStreamingPolicyTests.exe",
+        "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\tests\\StreamingPolicyTests.cpp",
+        "/link",
+        "/MACHINE:X64",
+        "/DEBUG",
+        "/INCREMENTAL:NO",
+        "/PDB:StreamingPolicyTests.pdb"
+      ],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\test-compile.log"
+    },
+    {
+      "Executable": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\StreamingPolicyTests.exe",
+      "Arguments": [],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\tests.log"
+    },
+    {
+      "Executable": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\cl.exe",
+      "Arguments": [
+        "/nologo",
+        "/c",
+        "/O2",
+        "/GL",
+        "/Gy",
+        "/Oi",
+        "/MD",
+        "/EHsc",
+        "/W3",
+        "/Zi",
+        "/DNDEBUG",
+        "/D_WINDOWS",
+        "/DWIN32",
+        "/D_WIN64",
+        "/DUNICODE",
+        "/D_UNICODE",
+        "/D_CRT_SECURE_NO_WARNINGS",
+        "/DBOOST_ALL_NO_LIB",
+        "/DBOOST_ERROR_CODE_HEADER_ONLY",
+        "/DBOOST_SYSTEM_NO_DEPRECATED",
+        "/FoFreeloader.obj",
+        "/FdFreeloader-compile.pdb",
+        "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\plugin\\Freeloader.cpp"
+      ],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\plugin-compile.log"
+    },
+    {
+      "Executable": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\link.exe",
+      "Arguments": [
+        "/nologo",
+        "/DLL",
+        "/MACHINE:X64",
+        "/SUBSYSTEM:WINDOWS",
+        "/LTCG",
+        "/DEBUG",
+        "/INCREMENTAL:NO",
+        "/OPT:REF",
+        "/OPT:ICF",
+        "/MANIFEST:NO",
+        "/OUT:Freeloader.dll",
+        "/IMPLIB:Freeloader.lib",
+        "/PDB:Freeloader.pdb",
+        "Freeloader.obj",
+        "KenshiLib.lib",
+        "OgreMain_x64.lib",
+        "MyGUIEngine_x64.lib",
+        "kernel32.lib",
+        "user32.lib",
+        "advapi32.lib"
+      ],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\plugin-link.log"
+    },
+    {
+      "Executable": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\dumpbin.exe",
+      "Arguments": [
+        "/nologo",
+        "/exports",
+        "Freeloader.dll"
+      ],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\exports.log"
+    },
+    {
+      "Executable": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\dumpbin.exe",
+      "Arguments": [
+        "/nologo",
+        "/headers",
+        "Freeloader.dll"
+      ],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\headers.log"
+    },
+    {
+      "Executable": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\dumpbin.exe",
+      "Arguments": [
+        "/nologo",
+        "/imports",
+        "Freeloader.dll"
+      ],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\imports.log"
+    },
+    {
+      "Executable": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\dumpbin.exe",
+      "Arguments": [
+        "/nologo",
+        "/dependents",
+        "Freeloader.dll"
+      ],
+      "ExitCode": 0,
+      "Log": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\dependents.log"
+    }
+  ],
+  "RuntimeInputs": [
+    {
+      "Path": "E:\\SteamLibrary\\steamapps\\common\\Kenshi\\RE_Kenshi\\kenshi_x64.exe",
+      "Length": 36713984,
+      "LastWriteTimeUtc": "2026-09-01T06:24:55.5562953Z",
+      "SHA256": "504B362CDE850D56AFB1CEA6F5B7B0EE014D9DD7B47E188599D91C804502CD3E"
+    },
+    {
+      "Path": "E:\\SteamLibrary\\steamapps\\common\\Kenshi\\KenshiLib.dll",
+      "Length": 951808,
+      "LastWriteTimeUtc": "2026-09-01T06:24:29.4239836Z",
+      "SHA256": "5B6240622D06801DC39896E385EFB834B8E1FE2FCDF86067D071AE7A04F6C83B"
+    },
+    {
+      "Path": "E:\\SteamLibrary\\steamapps\\common\\Kenshi\\RE_Kenshi\\RVAs\\Steam_1.0.65.br",
+      "Length": 30520,
+      "LastWriteTimeUtc": "2026-09-01T06:24:29.4368507Z",
+      "SHA256": "573C395997ED8D93DD837E27F89A440323089EDD1BA93F68291631B448F9CBD0"
+    }
+  ],
+  "Inputs": [
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\tools\\verify-native.py",
+      "Length": 5425,
+      "LastWriteTimeUtc": "2026-09-13T06:18:03.6347466Z",
+      "SHA256": "40921564823D543CB9DBABCC096A525E18CFB58469B3F815FC403F1548DFEE7C"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\tools\\inspect-loading.py",
+      "Length": 3332,
+      "LastWriteTimeUtc": "2026-09-13T06:03:55.1336524Z",
+      "SHA256": "6A82A2A785DCF61637A02373E9B6ED28EB573581CAA6F93235A6CEEAC0E473D9"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\tools\\build-plugin.ps1",
+      "Length": 13082,
+      "LastWriteTimeUtc": "2026-09-13T06:14:51.2344235Z",
+      "SHA256": "092B81EA2B0E8206508FA08E6FCE18C830CC638EF69D5C8171AA25B18A0D8B72"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\cl.exe",
+      "Length": 162112,
+      "LastWriteTimeUtc": "2010-03-19T21:02:22.0000000Z",
+      "SHA256": "DC30732C00642F33BE2C7E2AD42C78D5E9B6F5C980555A755AD6462DA300F7BE"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\link.exe",
+      "Length": 1039688,
+      "LastWriteTimeUtc": "2010-03-19T21:02:22.0000000Z",
+      "SHA256": "40069F4A86381D0552F80993FF4E89D64CF298E5E908FB29D8219F607A467FD3"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\toolchain\\vc100-extract\\Program Files(64)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\dumpbin.exe",
+      "Length": 15696,
+      "LastWriteTimeUtc": "2010-03-19T21:02:22.0000000Z",
+      "SHA256": "40353E6E73ACCF4EDDF73C0A2E28EB5BD1A7F330B9F1C376AEB99FA0B1111A51"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\native-contract.json",
+      "Length": 908,
+      "LastWriteTimeUtc": "2026-09-13T06:18:14.7429065Z",
+      "SHA256": "42AB6674722F2F1B3E73735F8D84B31EB3B493A1F0566B049E1EE90B05606E44"
+    },
+    {
+      "Path": "E:\\SteamLibrary\\steamapps\\common\\Kenshi\\mods\\Freeloader\\Freeloader.mod",
+      "Length": 46,
+      "LastWriteTimeUtc": "2026-09-13T05:47:01.0478909Z",
+      "SHA256": "EBDAB65D330E46E1FF9725AC5D0ED87FD8C718CFB41EF85B27B86EB3D35B79C0"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\plugin\\Freeloader.cpp",
+      "Length": 10735,
+      "LastWriteTimeUtc": "2026-09-13T06:18:03.6347466Z",
+      "SHA256": "9194B909485F5C47EB6B16CDE6F90798B8D55D9E90E382014CBC9B87C35F6F3C"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\plugin\\NativeContract.h",
+      "Length": 587,
+      "LastWriteTimeUtc": "2026-09-13T06:18:14.7390220Z",
+      "SHA256": "26ED9EB9807CAFDE31F96F475CD01CAB5A585E8B14E0D923D81109692294B27F"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\tests\\StreamingPolicyTests.cpp",
+      "Length": 2963,
+      "LastWriteTimeUtc": "2026-09-13T06:10:37.6928029Z",
+      "SHA256": "ED03A2DDCA58C66F72EDD52EBD5B73DDA75F1850D7601C784129B27755844E75"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\src\\StreamingPolicy.h",
+      "Length": 3075,
+      "LastWriteTimeUtc": "2026-09-13T06:09:04.1347681Z",
+      "SHA256": "E03946165A78472414BE81224C60535FA8B1D6599657F133293FFE3F0ED3004C"
+    }
+  ],
+  "TestsPassed": true,
+  "BinaryChecks": {
+    "Export": "?startPlugin@@YAXXZ",
+    "Machine": "8664",
+    "Imports": [
+      "ADVAPI32.dll",
+      "KenshiLib.dll",
+      "KERNEL32.dll",
+      "MSVCR100.dll"
+    ]
+  },
+  "Artifacts": [
+    {
+      "Name": "Freeloader.dll",
+      "File": {
+        "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\package\\Freeloader.dll",
+        "Length": 17920,
+        "LastWriteTimeUtc": "2026-09-13T06:18:17.8828208Z",
+        "SHA256": "A86E5D2ECD48B8EDC73174FCEBFF0D10442EEE56A838C4CD8A0491E6AF08C11D"
+      }
+    },
+    {
+      "Name": "Freeloader.ini",
+      "File": {
+        "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\package\\Freeloader.ini",
+        "Length": 100,
+        "LastWriteTimeUtc": "2026-09-13T06:09:04.1377606Z",
+        "SHA256": "814ED9D792044CC8BF4D79E8DE42945DA8DDBD12C9A0E041A253AC170BB1A77D"
+      }
+    },
+    {
+      "Name": "Freeloader.mod",
+      "File": {
+        "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\package\\Freeloader.mod",
+        "Length": 46,
+        "LastWriteTimeUtc": "2026-09-13T05:47:01.0478909Z",
+        "SHA256": "EBDAB65D330E46E1FF9725AC5D0ED87FD8C718CFB41EF85B27B86EB3D35B79C0"
+      }
+    },
+    {
+      "Name": "Freeloader.pdb",
+      "File": {
+        "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\package\\Freeloader.pdb",
+        "Length": 1780736,
+        "LastWriteTimeUtc": "2026-09-13T06:18:17.9236794Z",
+        "SHA256": "EBEA8E0207F3C56B12EDBD48CC16D35817DE85977A47E43352B0D5179ADA8CEE"
+      }
+    },
+    {
+      "Name": "native-contract.json",
+      "File": {
+        "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\package\\native-contract.json",
+        "Length": 908,
+        "LastWriteTimeUtc": "2026-09-13T06:18:14.7429065Z",
+        "SHA256": "42AB6674722F2F1B3E73735F8D84B31EB3B493A1F0566B049E1EE90B05606E44"
+      }
+    },
+    {
+      "Name": "RE_Kenshi.json",
+      "File": {
+        "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\package\\RE_Kenshi.json",
+        "Length": 36,
+        "LastWriteTimeUtc": "2026-09-13T06:09:04.1367630Z",
+        "SHA256": "685103F4EDB818D55C5B1E3804ECF5E1CBDC23579C06D9829AB5FDDD287D9E56"
+      }
+    },
+    {
+      "Name": "README.txt",
+      "File": {
+        "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\package\\README.txt",
+        "Length": 1652,
+        "LastWriteTimeUtc": "2026-09-13T06:14:05.7197102Z",
+        "SHA256": "7200DA5DA20A62AFE5B4C1B12A0D3BE48AF95F9D0CA4B0E2DCA3C2BC5FFCE0EB"
+      }
+    }
+  ],
+  "Evidence": [
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\dependents.log",
+      "Length": 464,
+      "LastWriteTimeUtc": "2026-09-13T06:18:18.0536250Z",
+      "SHA256": "787B81F0BDE1B36ABFEF55ED5D2026B9B8A139A9EB4C080DC232490535EE9A40"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\exports.log",
+      "Length": 747,
+      "LastWriteTimeUtc": "2026-09-13T06:18:17.9880176Z",
+      "SHA256": "F27C1D7AE4C0F90C24DA79AA3F06462546BC1B1AC71B6EEB1223DF242ABF4A4C"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\headers.log",
+      "Length": 5372,
+      "LastWriteTimeUtc": "2026-09-13T06:18:18.0147923Z",
+      "SHA256": "9730B14DDDBC6309246A16FC428101C4448244CFE3DB23AA7D142741CACA8140"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\imports.log",
+      "Length": 5401,
+      "LastWriteTimeUtc": "2026-09-13T06:18:18.0345652Z",
+      "SHA256": "0D9D0051B06AA21613242D7662CE6F787FDE67E63A3E78DF79FC5253447303A6"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\plugin-compile.log",
+      "Length": 16,
+      "LastWriteTimeUtc": "2026-09-13T06:18:17.4977035Z",
+      "SHA256": "9225DE7DCF9D5750AE301179F4A86114592CCF0406AE042739B012A20C324AD5"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\plugin-link.log",
+      "Length": 105,
+      "LastWriteTimeUtc": "2026-09-13T06:18:17.9492457Z",
+      "SHA256": "E49E7AE49BF176A7F4E7B4CCD12417F2C9D7D368638E1A6A83A7D5456B96E88A"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\test-compile.log",
+      "Length": 26,
+      "LastWriteTimeUtc": "2026-09-13T06:18:15.2907647Z",
+      "SHA256": "60262D79095AE5DB9AB2A87F2A6FEFCCFD1B9C2B9ADE0483F1F77EB3DAB3D105"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\tests.log",
+      "Length": 45,
+      "LastWriteTimeUtc": "2026-09-13T06:18:15.3310487Z",
+      "SHA256": "B6380E50C6FDC79B171EEC07D4CB3C6CC5C5266950099F80A4D96EFAF8F0BC15"
+    },
+    {
+      "Path": "C:\\Users\\Administrator\\Documents\\Projects\\Modding\\Kenshi\\Freeloader\\build\\releases\\20260912-231814-256-5d4e1606\\verify-native.log",
+      "Length": 89,
+      "LastWriteTimeUtc": "2026-09-13T06:18:14.7750800Z",
+      "SHA256": "3830C66A0B193AD44141BD0EED48E5B83448E987400C75B208783F939E27FF4D"
+    }
+  ],
+  "CompletedUtc": "2026-09-13T06:18:18.3180237Z"
+}

@@ -1,0 +1,5 @@
+build/
+plugin/NativeContract.h
+mod/Freeloader/*.dll
+mod/Freeloader/*.pdb
+__pycache__/
